@@ -9,8 +9,7 @@ module.exports = {
   },
   documents: "src/utils/apollo/graphql/query/*.graphql",
   generates: {
-    "src/utils/apollo/generated": {
-      preset: "client",
+    "src/utils/apollo/generated.ts": {
       plugins: [
         "typescript",
         "typescript-operations",
