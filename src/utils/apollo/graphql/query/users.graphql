@@ -1,0 +1,7 @@
+query selectUsers {
+  users {
+    user_id
+    name
+    inserted_at
+  }
+}
