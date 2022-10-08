@@ -1,12 +1,12 @@
-// import { useSelectUsersQuery } from "../../utils/apollo/generated/graphql";
-import {Container} from '@mui/material';
+import { useSelectUsersQuery } from "@/utils/apollo/generated";
+import { Card } from "@mui/material";
 
 export const HomePageComponent = () => {
-//   const { data } = useSelectUsersQuery();
+  const { data } = useSelectUsersQuery();
+  console.dir(data);
 
   return (
-    <div>
-       <Container> test  </Container> 
-    </div>
-  )
+    <Card>
+    </Card>
+  );
 };

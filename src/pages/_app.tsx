@@ -1,9 +1,14 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
 
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
+import { ApolloContextProvider } from "@/utils/apollo/apolloClient";
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
-  return <Component {...pageProps} />
-}
+const App = ({ Component, pageProps }: AppProps) => {
+  return (
+    <ApolloContextProvider pageProps={pageProps}>
+      <Component {...pageProps} />
+    </ApolloContextProvider>
+  );
+};
 
-export default MyApp
+export default App;
